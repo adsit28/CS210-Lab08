@@ -9,8 +9,6 @@
  * @param windSpeed speed of the wind in MPH
  * @param ambientTempF ambient temperature in F
  * @return one of the three cold advisory levels (see above)
- * @pre none
- * @post none
  */
 
 int coldAdvisory(int windSpeed, int ambientTempF);

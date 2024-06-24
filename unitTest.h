@@ -10,7 +10,5 @@
 
 /* -------------------------------------------------------
  * @brief runs individual unit test functions
- * @pre none
- * @post none
  */
 void runAllTests();
