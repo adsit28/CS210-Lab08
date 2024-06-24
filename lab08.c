@@ -7,21 +7,30 @@
  */
 
 #include <stdio.h>
+#include <stdlib.h>
 #include "advisory.h"
 #include "unitTest.h"
 
+#define RUNTESTS 1
 
-void calculateColdAdvisory() {
+int main(void) {
+
+    // This runs the unit tests when #define RUNTESTS is 1
+    if (RUNTESTS) {
+        runAllTests();
+        exit(0);
+    }
+    
     int ambientTemp = 0;
     int windSpeed = 0;
     int coldAdvise = NO_COLD_ADVISORY;
 
-    // user input
+   // user input
     printf("enter the wind speed: ");
-    scanf("%i", &windSpeed);
+    scanf("%d", &windSpeed);
 
     printf("enter the ambient temp: ");
-    scanf("%i", &ambientTemp);
+    scanf("%d", &ambientTemp);
 
     // get cold advisory level
     coldAdvise = coldAdvisory(windSpeed, ambientTemp);
@@ -35,18 +44,8 @@ void calculateColdAdvisory() {
         printf("There is a COLD WARNING ");
     }
 
-    printf("for temp: %2i ", ambientTemp);
-    printf("and wind: %2i\n", windSpeed);
-}
-
-
-int main(void) {
-
-    // Uncomment me to run all tests
-    //runAllTests();
-
-    // Uncomment me to run the main program
-    calculateColdAdvisory();
+    printf("for temp: %2d ", ambientTemp);
+    printf("and wind: %2d\n", windSpeed);
 
     return 0;
 }
