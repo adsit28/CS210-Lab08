@@ -11,7 +11,7 @@
 #include "advisory.h"
 #include "unitTest.h"
 
-#define RUNTESTS 1
+#define RUNTESTS 0
 
 int main(void) {
 
