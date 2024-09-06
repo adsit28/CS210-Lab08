@@ -1,4 +1,8 @@
 
+#ifndef ADVISORY_H
+#define ADVISORY_H
+
+
 #define NO_COLD_ADVISORY 0
 #define COLD_ADVISORY 1
 #define COLD_WARNING 2
@@ -12,3 +16,6 @@
  */
 
 int coldAdvisory(int windSpeed, int ambientTempF);
+
+
+#endif
